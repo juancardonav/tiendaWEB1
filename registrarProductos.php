@@ -9,6 +9,7 @@ if(isset($_POST["botonEnvio"]))
     $marca=$_POST['marca'];
     $valor=$_POST['valor'];
     $descripcion=$_POST['descripcion'];
+    $foto=$_POST['foto'];
 
     //copia u objeto de la clase BD
 
@@ -16,10 +17,14 @@ if(isset($_POST["botonEnvio"]))
     $transaccion->conectarBD();
 
     //crear consulta
-    $consultasSQL="INSERT INTO productos_bike(nombre,marca,valor,descripcion) VALUES ('$producto','$marca','$valor','$descripcion')";
+    $consultasSQL="INSERT INTO productos_bike(nombre,marca,valor,descripcion,foto) VALUES ('$producto','$marca','$valor','$descripcion','$foto')";
 
     //llamo al metodo de la clase DB agregarDatos
     $transaccion->agregarDatos($consultasSQL);
+
+    // redireccionar
+
+    header("location:formulario.php");
  
 }
 

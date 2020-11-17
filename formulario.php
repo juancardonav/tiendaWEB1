@@ -183,6 +183,12 @@
                             <textarea class="form-control" rows="2" placeholder="Descripción del Producto" name="descripcion"></textarea>
                         </div>
                     </div>
+					<div class="row mt-4">
+                        
+                        <div class="col">
+						<input type="text" class="form-control" placeholder="URL de la fotografia" name="foto">
+                        </div>
+                    </div>
                     
                     <div class="row mt-3">
 

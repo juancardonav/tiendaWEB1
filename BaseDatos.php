@@ -87,6 +87,27 @@ class BaseDatos{
             echo("Error");
         }  
     }
+
+    public function editarDatos($consultasSQL)
+    {
+                //establecer la conexion
+                $conexionBD=$this->conectarBD();
+
+                //preparar consulta
+                $editarDatos=$conexionBD->prepare($consultasSQL);
+        
+                //ejecutar la consulta
+                $resultado=$editarDatos->execute();
+        
+                //verifico el resultado
+        
+                if ($resultado){
+                    echo("usuario editado");
+                }
+                else{
+                    echo("error");
+                }
+    }
 }
 
 

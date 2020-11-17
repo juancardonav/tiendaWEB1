@@ -15,5 +15,8 @@ $consultaSQL="DELETE FROM productos_bike WHERE id='$idEliminar'";
 //4. Utilizar el metodo para eliminardatos
 $transaccion->eliminarDatos($consultaSQL);
 
+// redireccionar
+
+header("location:listaProductos.php");
 
 ?>
